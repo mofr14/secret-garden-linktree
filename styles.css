@@ -1,0 +1,234 @@
+:root {
+  --background-left: #dfead5;
+  --background-middle: #f3f8ee;
+  --background-right: #fbfdf8;
+  --heading-text: #33443c;
+  --link-text: #547660;
+  --border: #5c7d50;
+  --border-soft: #cfdec3;
+  --link-fill: rgba(249, 252, 244, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    var(--background-left) 0%,
+    var(--background-middle) 48%,
+    var(--background-right) 100%
+  );
+  color: var(--link-text);
+  font-family: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 40px 24px 56px;
+  place-items: start center;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: -28%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 24% 34%, rgba(84, 118, 96, 0.11), transparent 38%),
+    radial-gradient(ellipse at 72% 28%, rgba(169, 193, 148, 0.16), transparent 34%),
+    radial-gradient(ellipse at 54% 74%, rgba(84, 118, 96, 0.08), transparent 42%);
+  filter: blur(54px);
+  opacity: 0.58;
+  transform: translate3d(-1.5%, -1%, 0) rotate(-4deg) scale(1);
+  animation: wave-drift 18s ease-in-out infinite alternate;
+}
+
+.linktree {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 600px);
+}
+
+.brand {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 46px;
+}
+
+.brand-logo {
+  width: clamp(150px, 11vw, 220px);
+  height: clamp(150px, 11vw, 220px);
+  margin-bottom: 6px;
+  object-fit: contain;
+}
+
+.brand h1 {
+  margin: -28px 0 0;
+  color: var(--heading-text);
+  font-family: "AVRO", "Arvo", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 3.25vw, 4.1rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.links {
+  display: grid;
+  gap: 24px;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 98px 1fr 98px;
+  height: 64px;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--link-fill);
+  color: var(--link-text);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus-visible {
+  background: rgba(255, 255, 255, 0.48);
+  outline: none;
+}
+
+.link-disabled {
+  border-color: var(--border-soft);
+  cursor: default;
+}
+
+.link-icon {
+  width: 54px;
+  height: 54px;
+  justify-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.link-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-size: clamp(2rem, 2.15vw, 2.45rem);
+  line-height: 1;
+}
+
+.decorative-leaf {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.decorative-leaf-left {
+  bottom: clamp(-140px, -7vw, -84px);
+  left: clamp(-290px, -12.6vw, -190px);
+  width: clamp(720px, 52vw, 1100px);
+  opacity: 0.86;
+}
+
+.decorative-leaf-right {
+  top: clamp(-190px, -10vw, -110px);
+  right: clamp(-230px, -10vw, -130px);
+  width: clamp(620px, 44vw, 940px);
+  opacity: 0.78;
+  transform: rotate(40deg) scale(-1, -1);
+  transform-origin: center;
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: 24px 14px 36px;
+  }
+
+  .brand {
+    margin-bottom: 30px;
+  }
+
+  .brand-logo {
+    width: 132px;
+    height: 132px;
+    margin-bottom: 4px;
+  }
+
+  .brand h1 {
+    margin-top: -20px;
+    font-size: 2.5rem;
+  }
+
+  .links {
+    gap: 14px;
+  }
+
+  .link {
+    grid-template-columns: 72px 1fr 72px;
+  }
+
+  .link-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .link-label {
+    font-size: 1.55rem;
+  }
+
+  .decorative-leaf-left {
+    bottom: -118px;
+    left: -250px;
+    width: 560px;
+    opacity: 0.22;
+  }
+
+  .decorative-leaf-right {
+    top: -160px;
+    right: -210px;
+    width: 520px;
+    opacity: 0.26;
+    transform: rotate(40deg) scale(-1, -1);
+  }
+}
+
+@media (max-width: 390px) {
+  .brand h1 {
+    margin-top: -16px;
+    font-size: 2rem;
+  }
+
+  .link-label {
+    font-size: 1.25rem;
+  }
+}
+
+@keyframes wave-drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) rotate(-4deg) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1%, 0) rotate(3deg) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page::before {
+    animation: none;
+  }
+}
