@@ -99,7 +99,14 @@ body {
   border-radius: 8px;
   background: var(--link-fill);
   color: var(--link-text);
+  font: inherit;
   text-decoration: none;
+}
+
+button.link {
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
 }
 
 .link:hover,
@@ -128,6 +135,81 @@ body {
   text-align: center;
   font-size: clamp(2rem, 2.15vw, 2.45rem);
   line-height: 1;
+}
+
+.menu-dialog {
+  width: min(calc(100% - 40px), 460px);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 36px 28px 28px;
+  background: rgba(249, 252, 244, 0.96);
+  color: var(--link-text);
+  font-family: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.menu-dialog::backdrop {
+  background: rgba(51, 68, 60, 0.22);
+  backdrop-filter: blur(3px);
+}
+
+.menu-dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--heading-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.menu-dialog-title {
+  margin: 0 0 22px;
+  color: var(--heading-text);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.menu-options {
+  display: grid;
+  gap: 14px;
+}
+
+.menu-option {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.38);
+  color: var(--link-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.35rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-option:hover,
+.menu-option:focus-visible,
+.menu-dialog-close:hover,
+.menu-dialog-close:focus-visible {
+  background: rgba(255, 255, 255, 0.62);
+  outline: none;
+}
+
+.menu-option-disabled,
+.menu-option-disabled:hover {
+  border-color: var(--border-soft);
+  background: rgba(255, 255, 255, 0.24);
+  cursor: default;
 }
 
 .decorative-leaf {
