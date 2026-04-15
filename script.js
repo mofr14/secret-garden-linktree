@@ -2,7 +2,7 @@ const LINKS = [
   {
     label: "Our Website",
     href: "https://a-ponte.com/",
-    icon: "assets/icons/website-logo.png",
+    icon: "assets/icons/website-logo.webp",
   },
   {
     label: "restaurant menu",
@@ -12,7 +12,7 @@ const LINKS = [
   {
     label: "Event menu",
     href: "https://almamenu1.my.canva.site/dagu1mkct-q",
-    icon: "assets/icons/manu-rev-icon.png",
+    icon: "assets/icons/manu-rev-icon.webp",
   },
   {
     label: "Facebook Page",
@@ -32,7 +32,7 @@ const LINKS = [
   {
     label: "Rate Us On Google",
     href: "https://maps.app.goo.gl/URWvzwAUSFok6FXF8",
-    icon: "assets/icons/google-icon.png",
+    icon: "assets/icons/google-icon.webp",
   },
 ];
 
