@@ -1,7 +1,7 @@
 const RESTAURANT_MENU_OPTIONS = [
-  { label: "Breakfast Menu", href: "" },
-  { label: "Lunch & Dinner Menu", href: "" },
-  { label: "bakery menu", href: "" },
+  { label: "Breakfast Menu", href: "https://a-ponte-secret-garden.my.canva.site/breakfast-menu" },
+  { label: "Lunch & Dinner Menu", href: "https://a-ponte-secret-garden.my.canva.site/lunch-and-dinner-menu" },
+  { label: "Bakery menu", href: "" },
 ];
 
 const LINKS = [
