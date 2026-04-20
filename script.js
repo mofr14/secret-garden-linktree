@@ -6,8 +6,7 @@ const RESTAURANT_MENU_OPTIONS = [
 ];
 
 const EVENT_OPTIONS = [
-  { label: "Event Menu", href: "https://almamenu1.my.canva.site/dagu1mkct-q" },
-  { label: "Sunset Jam", href: "" },
+  { label: "Sunset Jam", href: "https://a-ponte-secret-garden.my.canva.site/sunset-jam" },
 ];
 
 const LINKS = [
