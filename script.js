@@ -18,7 +18,7 @@ const LINKS = [
   {
     label: "Our Events",
     href: "https://almamenu1.my.canva.site/dagu1mkct-q",
-    icon: "assets/icons/manu-rev-icon.webp",
+    icon: "assets/icons/event-icon.png",
   },
   {
     label: "Facebook Page",
