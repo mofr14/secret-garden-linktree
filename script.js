@@ -1,7 +1,7 @@
 const RESTAURANT_MENU_OPTIONS = [
   { label: "Breakfast Menu", href: "https://a-ponte-secret-garden.my.canva.site/breakfast-menu" },
   { label: "Lunch & Dinner Menu", href: "https://a-ponte-secret-garden.my.canva.site/lunch-and-dinner-menu" },
-  { label: "Bakery menu", href: "" },
+  { label: "Bakery Menu", href: "" },
 ];
 
 const LINKS = [
@@ -11,12 +11,12 @@ const LINKS = [
     icon: "assets/icons/website-logo.webp",
   },
   {
-    label: "restaurant menu",
+    label: "Restaurant Menu",
     icon: "assets/icons/manu-icon.svg",
     options: RESTAURANT_MENU_OPTIONS,
   },
   {
-    label: "Event menu",
+    label: "Our Events",
     href: "https://almamenu1.my.canva.site/dagu1mkct-q",
     icon: "assets/icons/manu-rev-icon.webp",
   },
@@ -26,7 +26,7 @@ const LINKS = [
     icon: "assets/icons/facebook-icon.svg",
   },
   {
-    label: "a Ponte Instaram",
+    label: "A Ponte Instaram",
     href: "https://www.instagram.com/secret.garden.pt/",
     icon: "assets/icons/instagram-icon.svg",
   },
@@ -104,7 +104,7 @@ function createMenuDialog() {
 
   closeButton.className = "menu-dialog-close";
   closeButton.type = "button";
-  closeButton.ariaLabel = "Close menu";
+  closeButton.ariaLabel = "Close Menu";
   closeButton.textContent = "x";
   closeButton.addEventListener("click", () => dialog.close());
 
