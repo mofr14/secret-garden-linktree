@@ -1,7 +1,15 @@
 const RESTAURANT_MENU_OPTIONS = [
-  { label: "Breakfast Menu", href: "https://a-ponte-secret-garden.my.canva.site/breakfast-menu" },
-  { label: "Lunch & Dinner Menu", href: "https://a-ponte-secret-garden.my.canva.site/lunch-and-dinner-menu" },
-  { label: "Drinks Menu", href: "" },
+  {
+    label: "Breakfast Menu",
+    href: "https://a-ponte-secret-garden.my.canva.site/breakfast-menu",
+    icon: "assets/icons/morning-icon.png",
+  },
+  {
+    label: "Lunch & Dinner Menu",
+    href: "https://a-ponte-secret-garden.my.canva.site/lunch-and-dinner-menu",
+    icon: "assets/icons/night-icon.png",
+  },
+  { label: "Drinks Menu", href: "", icon: "assets/icons/drinks-icon.png" },
   { label: "Bakery Menu", href: "" },
 ];
 
@@ -134,10 +142,27 @@ function openMenuDialog(title, options) {
   menuDialog.showModal();
 }
 
-function createMenuOption({ label, href }) {
+function createMenuOptionIcon(iconPath) {
+  const icon = document.createElement("span");
+  icon.className = "menu-option-icon";
+  icon.style.backgroundImage = `url("${iconPath}")`;
+  icon.setAttribute("aria-hidden", "true");
+
+  return icon;
+}
+
+function createMenuOptionLabel(text) {
+  const label = document.createElement("span");
+  label.className = "menu-option-label";
+  label.textContent = text;
+
+  return label;
+}
+
+function createMenuOption({ label, href, icon }) {
   const option = document.createElement(href ? "a" : "button");
   option.className = "menu-option";
-  option.textContent = label;
+  option.append(...(icon ? [createMenuOptionIcon(icon)] : []), createMenuOptionLabel(label));
 
   if (!href) {
     option.type = "button";
