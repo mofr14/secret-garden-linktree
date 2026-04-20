@@ -4,6 +4,11 @@ const RESTAURANT_MENU_OPTIONS = [
   { label: "Bakery Menu", href: "" },
 ];
 
+const EVENT_OPTIONS = [
+  { label: "Event Menu", href: "" },
+  { label: "Sunset Jam", href: "" },
+];
+
 const LINKS = [
   {
     label: "Our Website",
@@ -17,8 +22,8 @@ const LINKS = [
   },
   {
     label: "Our Events",
-    href: "https://almamenu1.my.canva.site/dagu1mkct-q",
     icon: "assets/icons/event-icon.png",
+    options: EVENT_OPTIONS,
   },
   {
     label: "Facebook Page",
